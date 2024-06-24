@@ -1,0 +1,18 @@
+html {
+	scrollbar-width: thin;
+	scrollbar-color: gray black;
+}
+
+.notes-container > div:nth-of-type(2) {
+	& > div:first-child {
+		display: none;
+
+		&.PvRhvb-qAWA2 {
+			display: block;
+		}
+	}
+}
+
+a[aria-label="Keep"] span {
+	display: none;
+}

@@ -1,0 +1,25 @@
+{
+	"extName": {
+		"message": "sideKeep - open Keep in side panel/popup",
+		"description": "Extension name"
+	},
+	"extDescription": {
+		"message": "Open Google Keep in side panel/popup. Open source",
+		"description": "Extension description"
+	},
+
+	"open_keep_in": {
+		"message": "Open keep in",
+		"description": "Open keep in"
+	},
+
+	"side_panel": {
+		"message": "Side Panel",
+		"description": "Side Panel"
+	},
+
+	"popup_window": {
+		"message": "Popup window",
+		"description": "Popup window"
+	}
+}

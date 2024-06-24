@@ -1,0 +1,13 @@
+build
+crx-hmr.js
+sideKeep.zip
+.vscode
+.TODO
+build.sh
+jsconfig.json
+_metadata
+
+# zip -r sideKeep.zip  build
+
+
+

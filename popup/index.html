@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sideKeep - open keep in popup window</title>
+</head>
+
+<body>
+    <iframe src="https://keep.google.com/" frameborder="0"></iframe>
+    <style>
+        html {
+            scrollbar-width: thin;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            background-color: black;
+            height: 600px;
+            width: 800px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            scrollbar-width: thin;
+            overflow: hidden;
+
+            &:empty::before {
+                content: "Loading...";
+                position: absolute;
+                inset: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>

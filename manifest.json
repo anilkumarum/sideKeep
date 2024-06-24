@@ -1,0 +1,64 @@
+{
+	"manifest_version": 3,
+	"minimum_chrome_version": "112",
+	"offline_enabled": true,
+	"default_locale": "en",
+	"name": "__MSG_extName__",
+	"short_name": "sideYT",
+	"description": "__MSG_extDescription__",
+	"version": "0.0.1",
+	"author": "WebRail",
+	"icons": {
+		"128": "icon-128.png",
+		"24": "icon-24.png"
+	},
+
+	"action": {
+		"default_title": "open Keep (Ctrl+Shift+K)",
+		"default_popup": "popup/index.html"
+	},
+
+	"options_page": "options/index.html",
+
+	"side_panel": {
+		"default_path": "panel/index.html"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://keep.google.com/*"],
+			"css": ["panel/style.css"],
+			"all_frames": true
+		}
+	],
+
+	"background": {
+		"service_worker": "background/background.js",
+		"type": "module"
+	},
+
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+K",
+				"windows": "Ctrl+Shift+K",
+				"mac": "Ctrl+Shift+K",
+				"linux": "Ctrl+Shift+K"
+			}
+		}
+	},
+
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ig_frame_rule",
+				"enabled": true,
+				"path": "net_request.json"
+			}
+		]
+	},
+
+	"permissions": ["declarativeNetRequestWithHostAccess", "sidePanel"],
+	"host_permissions": ["https://keep.google.com/*"],
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo7QCjvmChMjBY08kqIXahJ/HSK328D/Gn0RR0VYX129ab+BknnrycJr/rMziye6T9mb7g2q8uyb6Hl3C6U5U9/SJCQH8Kp/hMOjPxzNSoBvtI67YicfWkvYdHdGrGN2ulaESox8h0zpUindO1GlhFhVhiE3DMSDVLLozaI3rGqs8aEIpA4n6LcXDtdV8ZtagT74yZLWFjdwqekSzMFA1aR5NlHG5HzmTCUiV51hFKASs9ROeCuXjgzt2JKDnPK+WSa1hOvUBcgQFMdlTeayFar8pz8R+rvNv3fk2Vb2ET4ODtdnYUaZqLBRcuumi+62luYASXD4tqZNkAAfQGxO9ZwIDAQAB"
+}

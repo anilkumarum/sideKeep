@@ -1,0 +1,28 @@
+[
+	{
+		"id": 1,
+		"priority": 1,
+		"action": {
+			"type": "modifyHeaders",
+			"requestHeaders": [
+				{ "operation": "set", "header": "Sec-Fetch-Dest", "value": "document" },
+				{ "operation": "set", "header": "Sec-Fetch-Site", "value": "same-origin" },
+				{ "operation": "set", "header": "Sec-Ch-Ua-Mobile", "value": "?1" },
+				{ "operation": "set", "header": "Sec-Ch-Ua-Platform", "value": "\"Android\"" },
+				{
+					"operation": "set",
+					"header": "User-Agent",
+					"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36"
+				},
+				{ "operation": "set", "header": "Viewport-Width", "value": "350" }
+			],
+			"responseHeaders": [{ "operation": "remove", "header": "X-Frame-Options" }]
+		},
+
+		"condition": {
+			"initiatorDomains": ["eekgeppdhajdgjndpodmkbgaklmbhmoj"],
+			"urlFilter": "https://keep.google.com/*",
+			"resourceTypes": ["sub_frame"]
+		}
+	}
+]

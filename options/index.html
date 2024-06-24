@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration for sideKeep</title>
+</head>
+
+<body>
+    <section>
+        <div class="config-item" id="open_panel_config">
+            <div id="open_keep_in">Open keep in</div>
+            <div>
+                <label>
+                    <input type="radio" name="open_keep" value="sidePanel" checked>
+                    <span id="side_panel">Side Panel</span>
+                </label>
+            </div>
+            <div> <label> <input type="radio" name="open_keep" value="popup">
+                    <span id="popup_window">Popup window</span>
+                </label>
+            </div>
+        </div>
+    </section>
+    <style>
+        :scope {
+            color-scheme: light dark;
+            background-color: light-dark(white, black);
+            color: light-dark(black, white);
+        }
+
+        body {
+            font-size: 100%;
+        }
+    </style>
+    <script type="module" src="./options.js"></script>
+</body>
+
+</html>
